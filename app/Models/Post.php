@@ -18,6 +18,6 @@ class Post extends Model
 
     public function isLikedBy($user)
     {
-        return $this->likes->where('user_id', $user->id)->count() > 0;
+        return $this->likes->where('user_id', $user?->id || 0)->count() > 0;
     }
 }

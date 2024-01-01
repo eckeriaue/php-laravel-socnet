@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <a href="{{ route('post.create') }}" class="btn btn-success">Создать новый пост</a>
+        <a href="{{ route('post.create') }}" class="btn btn-success" style="background-color:#00923f">Создать новый пост</a>
     </div>
     <div class="mt-3">
         <div class="row row-cols-1">
@@ -29,7 +29,7 @@
                                 @if ($post->isLikedBy(auth()->user()))
                                     <button class="btn btn-danger" type="submit">Убрать лайк</button>
                                 @else
-                                    <button class="btn btn-success" type="submit">Нравится</button>
+                                    <button class="btn btn-success" style="background-color:#00923f" type="submit">Нравится</button>
                                 @endif
                             </form>
                             <div class="likes">

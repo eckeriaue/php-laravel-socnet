@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Twutter</title>
+    <title>document</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -15,12 +15,12 @@
 
     <!-- Scripts -->
     @routes
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', "resources/js/Pages/Message/Index.vue"])
+    @vite(['resources/js/app.js'])
 
 </head>
-<body class="bg-dark">
+<body style="background-color:#f0f2f5">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color:#00923f">
             <div class="container">
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -28,18 +28,21 @@
                     <ul class="navbar-nav me-auto align-items-center">
                         <li>
                             <a class="fs-4 nav-link px-2 text-white" href="{{ url('/') }}">
-                                Twutter
+                            ingbook
                             </a>
                         </li>
                         <li>
                             <a class="nav-link px-2 text-white" href="{{ route('users.index') }}">Пользователи</a>
                         </li>
+                        
+                        @if (auth()->check())
                         <li>
                             <a class="nav-link px-2 text-white" href="{{ route('messages.index') }}">Сообщения</a>
                         </li>
                         <li>
                             <a class="nav-link px-2 text-white" href="{{ route('friends.index') }}">Друзья</a>
                         </li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
