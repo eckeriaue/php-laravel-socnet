@@ -29,7 +29,9 @@
                                 @if ($post->isLikedBy(auth()->user()))
                                     <button class="btn btn-danger" type="submit">Убрать лайк</button>
                                 @else
-                                    <button class="btn btn-success" style="background-color:#00923f" type="submit">Нравится</button>
+
+                                <button class="btn btn-success" style="background-color:#00923f" type="submit">Нравится</button>
+
                                 @endif
                             </form>
                             <div class="likes">
