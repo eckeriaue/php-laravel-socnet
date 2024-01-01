@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color:#00923f">
             <div class="container">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto align-items-center">
                         <li>
@@ -88,12 +88,9 @@
         <main class="py-4">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-3">
-                    </div>
-                    <div class="col-6">
+                    <div class="px-2 mx-auto xl:max-w-full max-w-7xl">
                         @yield('content')
                     </div>
-                    <div class="col-3"></div>
                 </div>
             </div>
         </main>
