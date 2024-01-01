@@ -24,6 +24,8 @@
                             <img class="rounded" src="/storage/{{ $post->image }}" alt="" style="width: 100%;">
                         </div>
                         <div class="d-flex align-items-center" style="gap: 10px;">
+                            @auth
+                                
                             <form action="{{ route('post.like', $post->id) }}" method="post">
                                 @csrf
                                 @if ($post->isLikedBy(auth()->user()))
@@ -34,6 +36,8 @@
 
                                 @endif
                             </form>
+                            
+                            @endauth
                             <div class="likes">
                                 @foreach($post['likes'] as $likes)
                                     <a href="{{ route('users.index') }}/{{ $likes->user_id }}" title="{{ $likes->user_name }}">
