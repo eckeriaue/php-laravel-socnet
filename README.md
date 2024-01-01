@@ -7,3 +7,5 @@
 - php artisan storage:link
 - php artisan serve
 - npm run dev or vite
+
+- 
